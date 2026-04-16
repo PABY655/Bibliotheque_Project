@@ -4,9 +4,16 @@ from datetime import timedelta
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-CHANGE-ME-IN-PRODUCTION'
-DEBUG = True
-ALLOWED_HOSTS = ["*"]
+DEBUG = False
+ALLOWED_HOSTS = [
+    'bibliothequeproject-production.up.railway.app',
+    'localhost',
+    '127.0.0.1',
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://bibliothequeproject-production.up.railway.app',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
